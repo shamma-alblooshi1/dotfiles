@@ -26,7 +26,7 @@ in {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {inherit inputs;};
-        home-manager.users.brian = {
+        home-manager.users.shamma = {
           imports =
             lib.optionals cfg.isClient [(import ../home/home-client.nix)]
             ++ lib.optionals cfg.isServer [(import ../home/home-server.nix)]
@@ -65,7 +65,7 @@ in {
 
         # Avoid copying unecessary stuff over SSH
         builders-use-substitutes = true;
-        trusted-users = ["root" "brian"];
+        trusted-users = ["root" "shamma"];
         auto-optimise-store = true; # Optimise syslinks
         keep-outputs = true; # Keep outputs of derivations
         keep-derivations = true; # Keep derivations
@@ -93,8 +93,8 @@ in {
           supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
           mandatoryFeatures = [];
           #TODO Fix this
-          sshUser = "brian";
-          sshKey = "/home/brian/.ssh/builder-key";
+          sshUser = "shamma";
+          sshKey = "/home/shamma/.ssh/builder-key";
         }
         {
           hostName = "vedenemo-builder";
@@ -105,7 +105,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "bmg";
-          sshKey = "/home/brian/.ssh/builder-key";
+          sshKey = "/home/shamma/.ssh/builder-key";
         }
       ];
 

@@ -8,8 +8,8 @@
   programs.git = {
     package = pkgs.gitAndTools.gitFull;
     enable = true;
-    userName = "Brian McGillion";
-    userEmail = "bmg.avoin@gmail.com";
+    userName = "shamma-alblooshi1";
+    userEmail = "shamma.albooshi@tii.ae";
     delta.enable = true; # see diff in a new light
     delta.options = {
       line-numbers = true;
@@ -25,13 +25,13 @@
       commit.gpgsign = true;
       tag.gpgSign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/id_ed25519_sk.pub";
+      user.signingkey = "~/.ssh/shamma.pub";
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
       init.defaultBranch = "main";
       #protocol.keybase.allow = "always";
       pull.rebase = "true";
       push.default = "current";
-      github.user = "brianmcgillion";
+      github.user = "shamma-alblooshi1";
       gitlab.user = "bmg";
     };
   };

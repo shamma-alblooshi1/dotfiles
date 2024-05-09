@@ -22,5 +22,6 @@
     man-pages-posix
     nix-doc
     nix-tree
+    vscode
   ];
 }

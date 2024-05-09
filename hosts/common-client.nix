@@ -70,8 +70,8 @@
     #     supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
     #     mandatoryFeatures = [];
     #     #TODO Fix this
-    #     sshUser = "brian";
-    #     sshKey = "/home/brian/.ssh/builder-key";
+    #     sshUser = "shamma";
+    #     sshKey = "/home/shamma/.ssh/builder-key";
     #   }
     # ];
   };

@@ -7,9 +7,9 @@
 
   home = {
     #TODO ask Brian about config
-    username = "brian"; #config.users.users.brian.name;
-    homeDirectory = "/home/brian"; #config.users.users.brian.home;
-    stateVersion = "23.05";
+    username = "shamma"; #config.users.users.brian.name;
+    homeDirectory = "/home/shamma"; #config.users.users.brian.home;
+    stateVersion = "23.11";
   };
 
   ### A tidy $HOME is a tidy mind
