@@ -104,7 +104,7 @@ in {
           supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
           mandatoryFeatures = [];
           #TODO Fix this
-          sshUser = "bmg";
+          sshUser = "shamma";
           sshKey = "/home/shamma/.ssh/builder-key";
         }
       ];

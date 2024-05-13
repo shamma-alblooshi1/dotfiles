@@ -15,10 +15,17 @@
     extraModulePackages = [];
   };
 
-  fileSystems."/" =
+    fileSystems."/" =
     { device = "/dev/disk/by-uuid/5deea731-5283-4d03-890e-e328188a86a1";
       fsType = "ext4";
     };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/FAB0-F616";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
 
   swapDevices = [];
 
