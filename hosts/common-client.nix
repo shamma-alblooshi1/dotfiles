@@ -29,7 +29,7 @@
       loader.systemd-boot.enable = true;
       loader.systemd-boot.configurationLimit = 5;
       loader.efi.canTouchEfiVariables = true;
-      loader.efi.efiSysMountPoint = "/boot/efi";
+      loader.efi.efiSysMountPoint = "/boot";
     };
 
     # Common network configuration
