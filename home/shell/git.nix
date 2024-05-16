@@ -18,14 +18,14 @@
     };
     ignores = ["*~" "*.swp"];
     extraConfig = {
-      core.editor = "emacs";
+      core.editor = "code --wait";
       color.ui = "auto";
       #credential.helper = "store --file ~/.git-credentials";
       format.signoff = true;
       commit.gpgsign = true;
       tag.gpgSign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/id_ed25519.pub";
+      user.signingkey = "~/.ssh/id_ed25519";
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
       init.defaultBranch = "main";
       #protocol.keybase.allow = "always";
