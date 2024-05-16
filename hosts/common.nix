@@ -86,7 +86,7 @@ in {
       #https://nixos.wiki/wiki/Distributed_build#NixOS
       buildMachines = [
         {
-          hostName = "awsarm";
+          hostName = "hetzarm";
           system = "aarch64-linux";
           maxJobs = 8;
           speedFactor = 1;
@@ -94,7 +94,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/id_ed25519.pub";
+          sshKey = "/home/shamma/.ssh/shamma.pub";
         }
         {
           hostName = "vedenemo-builder";
@@ -105,7 +105,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/id_ed25519.pub";
+          sshKey = "/home/shamma/.ssh/shamma.pub";
         }
       ];
 
@@ -137,12 +137,9 @@ in {
       ssh = {
         startAgent = true;
         extraConfig = ''
-          Host awsarm
-               HostName awsarm.vedenemo.dev
-               Port 20220
-          Host nephele
-               Hostname 65.109.25.143
-               Port 22
+          Host hetzarm
+               user bmg
+               HostName 65.21.20.242
           host ghaf-net
                user ghaf
                hostname 192.168.10.108
@@ -153,33 +150,15 @@ in {
           host vedenemo-builder
                user bmg
                hostname builder.vedenemo.dev
-          host caelus
-               hostname 95.217.167.39
         '';
         knownHosts = {
-          awsarm-ed25519 = {
-            hostNames = ["awsarm.vedenemo.dev"];
-            publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL3f7tAAO3Fc+8BqemsBQc/Yl/NmRfyhzr5SFOSKqrv0";
-          };
-          awsarm-rsa = {
-            hostNames = ["awsarm.vedenemo.dev"];
-            publicKey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtP5yuGAaMGK4GPsViPCIZvaPXN2tPoZH59i6CtPA1Vg8JzRX9g2PgFmUbNtQ9nxQhtUlVbNddCxoEKPJt+VgL/23o1DXM+EauuGOp9PijfcNqDq2jvwW1yoCnxMyA53vC7gR6CYGdu9BhQJYK9S4SaHtf4RcfUa39uWPfUCIKUyG9vB+T9p7E86O+pLBMRpAvppitFLdkxgAYZeedFUvhIQQZlTTJ7ELT3bJry5S+aBck83uZuU1guklyvCR9cZLMiAG2N4Goo/mH11kS4ytMV0AvpY2x4qY40wQvb3gGDYj53WArTkTf52yHELDbtCnjlwFW+5hJBog6CQaxy0S8eSN4MBbM2czmXh3sofwW7iB3iXr6q7IpTzcpeaiawau/OucTBnjVF+wm8C8MV3ekmEyTD+xEGQxESgJgqTLnHD3EKWm4qCTZBhq+XuazVP60eKvK5OVcIxsKHP4WO0YvP8oyjT62ur60wVKtJ2FJ3f0SAtSM2igV2KuDgdi3lek=";
-          };
-          awsarm-eddsa = {
-            hostNames = ["awsarm.vedenemo.dev"];
-            publicKey = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNH+bPKgI9X7G1/MYq8fUSIkOyL2TmhH0quYlbX8fb9Z0AG6qRcNHaoFFIJaKxWEcAafo+hZNI1A9LKsY9MYXtE=";
-          };
           vedenemo-builder = {
             hostNames = ["builder.vedenemo.dev"];
             publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHSI8s/wefXiD2h3I3mIRdK+d9yDGMn0qS5fpKDnSGqj";
           };
-          nephele = {
-            hostNames = ["65.109.25.143"];
-            publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFwoWKmFa6B9SBci63YG0gaP2kxhXNn1vlMgbky6LjKr";
-          };
-          caelus = {
-            hostNames = ["95.217.167.39"];
-            publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFHrlodsjLMgGSEM0+NP+0FN7MD6gkySxo7ydKWxP44w";
+          hetzarm-ed25519 = {
+            hostNames = ["65.21.20.242"];
+            publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILx4zU4gIkTY/1oKEOkf9gTJChdx/jR3lDgZ7p/c7LEK";
           };
         };
       };
