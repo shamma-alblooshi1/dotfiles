@@ -94,7 +94,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/shamma.pub";
+          sshKey = "/home/shamma/.ssh/id_ed25519";
         }
         {
           hostName = "vedenemo-builder";
@@ -105,7 +105,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/shamma.pub";
+          sshKey = "/home/shamma/.ssh/id_ed25519";
         }
       ];
 
@@ -138,7 +138,7 @@ in {
         startAgent = true;
         extraConfig = ''
           Host hetzarm
-               user bmg
+               user shamma
                HostName 65.21.20.242
           host ghaf-net
                user ghaf
@@ -148,7 +148,7 @@ in {
                hostname 192.168.101.2
                proxyjump ghaf-net
           host vedenemo-builder
-               user bmg
+               user shamma
                hostname builder.vedenemo.dev
         '';
         knownHosts = {
