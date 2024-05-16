@@ -94,7 +94,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/builder-key";
+          sshKey = "/home/shamma/.ssh/id_ed25519.pub";
         }
         {
           hostName = "vedenemo-builder";
@@ -105,7 +105,7 @@ in {
           mandatoryFeatures = [];
           #TODO Fix this
           sshUser = "shamma";
-          sshKey = "/home/shamma/.ssh/builder-key";
+          sshKey = "/home/shamma/.ssh/id_ed25519.pub";
         }
       ];
 

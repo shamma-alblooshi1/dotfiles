@@ -25,7 +25,7 @@
       commit.gpgsign = true;
       tag.gpgSign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/shamma.pub";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
       init.defaultBranch = "main";
       #protocol.keybase.allow = "always";
