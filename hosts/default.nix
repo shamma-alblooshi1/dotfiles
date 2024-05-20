@@ -11,7 +11,6 @@
     common-server = import ./common-server.nix;
 
     # host modules
-    host-caelus = import ./caelus;
     host-lenovo = import ./lenovo;
   };
 
@@ -19,13 +18,6 @@
     # make self and inputs available in nixos modules
     specialArgs = {inherit self inputs;};
   in {
-
-
-    caelus = lib.nixosSystem {
-      inherit specialArgs;
-      modules = [self.nixosModules.host-caelus];
-    };
-
     lenovo = lib.nixosSystem {
       inherit specialArgs;
       modules = [self.nixosModules.host-lenovo];
