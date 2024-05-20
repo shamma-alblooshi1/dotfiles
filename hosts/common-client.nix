@@ -14,7 +14,6 @@
       emacs
       libreoffice
       locale-font
-      yubikey
     ])
     [
       ./common.nix
