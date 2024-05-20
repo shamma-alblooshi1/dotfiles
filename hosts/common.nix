@@ -14,7 +14,7 @@ in {
       [
         hardening
         system-packages
-        user-bmg
+        user-shamma
         user-groups
         xdg
         scripts
