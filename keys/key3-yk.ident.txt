@@ -1,7 +1,0 @@
-#       Serial: 23502321, Slot: 1
-#         Name: key3-yk
-#      Created: Sun, 19 Feb 2023 06:13:56 +0000
-#   PIN policy: Once   (A PIN is required once per session, if set)
-# Touch policy: Cached (A physical touch is required for decryption, and is cached for 15 seconds)
-#    Recipient: age1yubikey1qvlquhc759rh69usa4dptw0rkcn0m6cghrz3j2f8064nfgag7anmqlfcsf2
-AGE-PLUGIN-YUBIKEY-17XWKVQVZ8HGSA2Q7FPRRD
