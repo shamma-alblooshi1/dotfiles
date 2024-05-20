@@ -11,7 +11,6 @@
     common-server = import ./common-server.nix;
 
     # host modules
-    host-minerva = import ./minerva;
     host-nephele = import ./nephele;
     host-caelus = import ./caelus;
     host-lenovo = import ./lenovo;
@@ -21,10 +20,6 @@
     # make self and inputs available in nixos modules
     specialArgs = {inherit self inputs;};
   in {
-    minerva = lib.nixosSystem {
-      inherit specialArgs;
-      modules = [self.nixosModules.host-minerva];
-    };
 
     nephele = lib.nixosSystem {
       inherit specialArgs;
