@@ -11,7 +11,6 @@
     common-server = import ./common-server.nix;
 
     # host modules
-    host-nephele = import ./nephele;
     host-caelus = import ./caelus;
     host-lenovo = import ./lenovo;
   };
@@ -21,10 +20,6 @@
     specialArgs = {inherit self inputs;};
   in {
 
-    nephele = lib.nixosSystem {
-      inherit specialArgs;
-      modules = [self.nixosModules.host-nephele];
-    };
 
     caelus = lib.nixosSystem {
       inherit specialArgs;
