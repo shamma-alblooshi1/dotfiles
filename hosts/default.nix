@@ -11,7 +11,6 @@
     common-server = import ./common-server.nix;
 
     # host modules
-    host-arcadia = import ./arcadia;
     host-minerva = import ./minerva;
     host-nephele = import ./nephele;
     host-caelus = import ./caelus;
@@ -22,11 +21,6 @@
     # make self and inputs available in nixos modules
     specialArgs = {inherit self inputs;};
   in {
-    arcadia = lib.nixosSystem {
-      inherit specialArgs;
-      modules = [self.nixosModules.host-arcadia];
-    };
-
     minerva = lib.nixosSystem {
       inherit specialArgs;
       modules = [self.nixosModules.host-minerva];
