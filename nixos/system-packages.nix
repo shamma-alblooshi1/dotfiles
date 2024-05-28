@@ -23,5 +23,6 @@
     nix-doc
     nix-tree
     vscode
+    nix-eval-jobs
   ];
 }
