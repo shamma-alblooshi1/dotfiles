@@ -129,7 +129,7 @@ in {
       firewall = {
         enable = true;
       };
-      nftables.enable = true;
+      #nftables.enable = true;
     };
 
     ## Local config
@@ -142,7 +142,7 @@ in {
                HostName 65.21.20.242
           host ghaf-net
                user ghaf
-               hostname 192.168.10.108
+               hostname 192.168.50.162
           host ghaf-host
                user ghaf
                hostname 192.168.101.2

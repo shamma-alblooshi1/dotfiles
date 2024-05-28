@@ -15,6 +15,8 @@
         #sops-nix
         sops
         ssh-to-age
+        nix
+        nix-eval-jobs
       ];
     };
   };

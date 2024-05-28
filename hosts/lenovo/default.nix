@@ -40,6 +40,13 @@
   # Define your hostname
   networking.hostName = "lenovo";
 
+  networking = {
+  firewall.enable = true;
+  firewall.extraCommands =  '' 
+        '';
+};
+
+
  
 
   # Configure keymap in X11
@@ -47,6 +54,32 @@
     # services.xserver.xkb.layout = "us";
     # services.xserver.xkb.options = "eurosign:e,caps:escape";
   };
+  
+
+  
+   services.globalprotect = {
+    enable = true;
+    csdWrapper = "${pkgs.openconnect}/libexec/openconnect/hipreport.sh";
+  };
+
+  # This also enable the gpclient.
+  systemd.user.services = {
+    gpclient = {
+      description = "A GlobalProtect VPN client (GUI) for Linux, based on OpenConnect and built with Qt5, supports SAML auth mode.";
+      enable = true;
+      wantedBy = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      partOf = [ "graphical-session.target" ];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.globalprotect-openconnect}/bin/gpclient";
+        Restart = "on-failure";
+        RestartSec = 3;
+        portal = "access.tii.ae";
+        username = "shamma.alblooshi";
+      };
+    };
+    };
 
   console.useXkbConfig = true;
 

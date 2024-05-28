@@ -23,5 +23,10 @@
     nix-doc
     nix-tree
     vscode
+    nix-eval-jobs
+    iptables
+    openconnect
+    globalprotect-openconnect
+    wireshark
   ];
 }

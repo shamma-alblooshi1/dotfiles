@@ -32,7 +32,6 @@
       pull.rebase = "true";
       push.default = "current";
       github.user = "shamma-alblooshi1";
-      gitlab.user = "bmg";
     };
   };
 
