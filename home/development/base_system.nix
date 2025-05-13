@@ -16,5 +16,13 @@
     clang-tools
     bear
     vscode
+    #python
+    python310
+    python310Packages.virtualenv
+    python310Packages.pip
+
+    #ollama
+    ollama
+
   ];
 }

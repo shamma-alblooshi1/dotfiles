@@ -142,10 +142,10 @@ in {
                HostName 65.21.20.242
           host ghaf-net
                user ghaf
-               hostname 192.168.50.162
+               hostname 192.168.1.74
           host ghaf-host
                user ghaf
-               hostname 192.168.101.2
+               hostname 192.168.100.2
                proxyjump ghaf-net
           host vedenemo-builder
                user shamma
