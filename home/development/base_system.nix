@@ -17,10 +17,9 @@
     bear
     vscode
     #python
-    python310
-    python310Packages.virtualenv
-    python310Packages.pip
-
+    python312
+    python312Packages.virtualenv
+    python312Packages.pip
     #ollama
     ollama
 

@@ -7,7 +7,7 @@
 }:
 with lib; {
   services.emacs.enable = false;
-  services.emacs.package = with pkgs; ((emacsPackagesFor emacs29-pgtk).emacsWithPackages
+  services.emacs.package = with pkgs; ((emacsPackagesFor emacs30-pgtk).emacsWithPackages
     (epkgs:
       with epkgs; [
         vterm
@@ -25,7 +25,7 @@ with lib; {
 
   environment.systemPackages = with pkgs;
     [
-      ((emacsPackagesFor emacs29-pgtk).emacsWithPackages
+      ((emacsPackagesFor emacs30-pgtk).emacsWithPackages
         (epkgs:
           with epkgs; [
             vterm

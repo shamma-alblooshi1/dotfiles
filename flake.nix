@@ -2,6 +2,13 @@
 {
   description = "First honest attempt to declare a system";
 
+   nixConfig = {
+    extra-substituters = [ "https://nix-community.cachix.org" ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
+
   inputs = {
     # Nix Packages, following unstable (rolling release)
     nixpkgs.url = "nixpkgs/nixos-unstable"; # primary nixpkgs
@@ -21,6 +28,11 @@
     flake-compat = {
       url = "github:inclyc/flake-compat";
       flake = false;
+    };
+
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # dotfiles style package management
@@ -54,6 +66,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
+
+    mcp-nixos = {
+      url = "github:utensils/mcp-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.devshell.follows = "devshell";
+    };
+
 
     #TODO add the following for more managable configs
     #https://github.com/ehllie/ez-configs/tree/main

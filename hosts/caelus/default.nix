@@ -48,5 +48,5 @@
   # It is not moving so lock it down
   time.timeZone = "Europe/Helsinki";
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 }

@@ -12,9 +12,9 @@
     evolution
     evolutionWithPlugins
     evolution-data-server
-    gnome.geary
-    gnome.gnome-music
-    gnome.gnome-contacts
-    gnome.cheese
+    geary
+    gnome-music
+    gnome-contacts
+    cheese
   ];
 }

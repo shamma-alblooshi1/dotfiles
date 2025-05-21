@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs,inputs, ...}: {
   environment.systemPackages = with pkgs; [
     alejandra
     cachix
@@ -28,5 +28,6 @@
     openconnect
     globalprotect-openconnect
     wireshark
+    inputs.mcp-nixos.packages."${pkgs.system}".default
   ];
 }
