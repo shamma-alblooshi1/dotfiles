@@ -16,6 +16,7 @@
     # Make the system more modular
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-root.url = "github:srid/flake-root";
+    flake-utils.url = "github:numtide/flake-utils";
 
     # Formatting
     treefmt-nix = {
@@ -71,6 +72,12 @@
       url = "github:utensils/mcp-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.devshell.follows = "devshell";
+    };
+
+    claude-desktop = {
+      url =  "github:k3d3/claude-desktop-linux-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
 

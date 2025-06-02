@@ -20,8 +20,12 @@
     python312
     python312Packages.virtualenv
     python312Packages.pip
+    python312Packages.mcp
+    python312Packages.mcp
+    python312Packages.pydantic
     #ollama
     ollama
-
+    uv
+    teams-for-linux
   ];
 }

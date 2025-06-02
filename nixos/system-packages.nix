@@ -28,6 +28,13 @@
     openconnect
     globalprotect-openconnect
     wireshark
+    #MCP
+    github-mcp-server
     inputs.mcp-nixos.packages."${pkgs.system}".default
+    alpaca
+    aider-chat
+    #Claude Desktop
+    inputs.claude-desktop.packages."${system}".claude-desktop
+    inputs.claude-desktop.packages."${system}".claude-desktop-with-fhs
   ];
 }
