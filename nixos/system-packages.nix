@@ -36,5 +36,8 @@
     #Claude Desktop
     inputs.claude-desktop.packages."${system}".claude-desktop
     inputs.claude-desktop.packages."${system}".claude-desktop-with-fhs
+
+    #devenv
+     devenv
   ];
 }

@@ -166,6 +166,10 @@ in {
       command-not-found = {
         enable = false;
       };
+
+      nix-ld = {
+        enable = true;
+      };
     };
 
     # Contents of the user and group files will be replaced on system activation
