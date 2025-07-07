@@ -74,5 +74,21 @@
     #     sshKey = "/home/shamma/.ssh/builder-key";
     #   }
     # ];
+
+
+    virtualisation.docker = {
+  enable = true;
+};
+
+#wireshark
+   programs.wireshark.usbmon.enable=true;
+  programs.wireshark.enable=true;
+
+    services.udev = {
+    extraRules = ''
+      SUBSYSTEM=="usbmon", GROUP="wireshark", MODE="0640"
+    '';
+  };
+
   };
 }

@@ -27,5 +27,11 @@
     ollama
     uv
     teams-for-linux
+
+    #open-webui
+    open-webui
+
+    #jan
+    jan
   ];
 }

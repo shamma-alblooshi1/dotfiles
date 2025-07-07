@@ -42,6 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # Disko for disk partitioning
