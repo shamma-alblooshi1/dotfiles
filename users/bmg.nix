@@ -9,7 +9,7 @@ _: {
         "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIEJ9ewKwo5FLj6zE30KnTn8+nw7aKdei9SeTwaAeRdJDAAAABHNzaDo="
         "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIA/pwHnzGNM+ZU4lANGROTRe2ZHbes7cnZn72Oeun/MCAAAABHNzaDo="
       ];
-      extraGroups = ["networkmanager" "wheel" "dialout" "plugdev" "docker"];
+      extraGroups = ["networkmanager" "wheel" "dialout" "plugdev" "docker" "wireshark"];
       #Set an initial dummy "Password" for the first boot
       # sudo -i ; passwd <username>
       password= "shamooh@2017";

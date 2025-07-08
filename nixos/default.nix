@@ -12,5 +12,6 @@ _: {
     yubikey = import ./yubikey.nix;
     fail2ban = import ./fail2ban.nix;
     sshd = import ./sshd.nix;
+    wireshark = import ./wireshark.nix;
   };
 }
