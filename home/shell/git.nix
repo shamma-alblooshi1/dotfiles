@@ -6,7 +6,7 @@
   home.file.".ssh/allowed_signers".text = "* ${builtins.readFile ../../keys/ssh-keys.txt}";
 
   programs.git = {
-    package = pkgs.gitAndTools.gitFull;
+    package = pkgs.gitFull;
     enable = true;
     userName = "shamma-alblooshi1";
     userEmail = "shamma.albooshi@tii.ae";
@@ -37,6 +37,6 @@
 
   programs.gh = {
     enable = true;
-    extensions = with pkgs; [gh-poi gh-eco gh-dash gh-markdown-preview gh-copilot];
+    extensions = with pkgs; [gh-poi gh-eco gh-dash gh-markdown-preview];
   };
 }

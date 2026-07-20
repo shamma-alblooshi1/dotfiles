@@ -8,7 +8,7 @@
     cmake
     coreutils
     gnumake
-    nodePackages.npm
+    nodejs
     bibtool
     llvm
     gcc
@@ -16,13 +16,15 @@
     clang-tools
     bear
     vscode
+
     #python
-    python312
-    python312Packages.virtualenv
-    python312Packages.pip
-    python312Packages.mcp
-    python312Packages.mcp
-    python312Packages.pydantic
+    # python312
+    # python312Packages.virtualenv
+    # python312Packages.pip
+    # python312Packages.mcp
+    # python312Packages.mcp
+    # python312Packages.pydantic
+
     #ollama
     ollama
     uv

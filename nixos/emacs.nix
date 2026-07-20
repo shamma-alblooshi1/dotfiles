@@ -53,13 +53,12 @@ with lib; {
       # :formating
       dockfmt
       libxml2
-      nodePackages.prettier
 
       # : treemacs
       python3
 
       # :copilot
-      nodejs
+      #nodejs
 
       # :lang markdown
       python3.pkgs.grip

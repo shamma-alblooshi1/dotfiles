@@ -69,17 +69,17 @@
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
 
-    mcp-nixos = {
-      url = "github:utensils/mcp-nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.devshell.follows = "devshell";
-    };
+    # mcp-nixos = {
+    #   url = "github:utensils/mcp-nixos";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.devshell.follows = "devshell";
+    # };
 
-    claude-desktop = {
-      url =  "github:k3d3/claude-desktop-linux-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
+    # claude-desktop = {
+    #   url =  "github:k3d3/claude-desktop-linux-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-utils.follows = "flake-utils";
+    # };
 
 
     #TODO add the following for more managable configs
